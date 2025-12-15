@@ -1,0 +1,111 @@
+{
+  "configVersion": 1,
+  "timestamp": 1765802445253,
+  "index": "/dpwebsite/index.csr.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/dpwebsite/chunk-2ZUG45BM.js",
+        "/dpwebsite/chunk-7ZITS56O.js",
+        "/dpwebsite/chunk-ALZGCUGL.js",
+        "/dpwebsite/chunk-BCDKMLQV.js",
+        "/dpwebsite/chunk-ESXQSZVP.js",
+        "/dpwebsite/chunk-HP7J7LAN.js",
+        "/dpwebsite/chunk-J5FYKYFJ.js",
+        "/dpwebsite/favicon.ico",
+        "/dpwebsite/index.csr.html",
+        "/dpwebsite/main-YHGP6UHF.js",
+        "/dpwebsite/styles-HMM3YSRF.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/dpwebsite/assets/icons/aarti.svg",
+        "/dpwebsite/assets/icons/person.svg",
+        "/dpwebsite/assets/icons/youtube.svg",
+        "/dpwebsite/assets/images/06-Maa-Katyayani.webp",
+        "/dpwebsite/assets/images/Day-4.png",
+        "/dpwebsite/assets/images/IMG-20251020-WA0014.jpg",
+        "/dpwebsite/assets/images/brahmCharni.jpg",
+        "/dpwebsite/assets/images/day5.webp",
+        "/dpwebsite/assets/images/day7.webp",
+        "/dpwebsite/assets/images/day8.webp",
+        "/dpwebsite/assets/images/day9.jpg",
+        "/dpwebsite/assets/images/decorated-shankh.jpg",
+        "/dpwebsite/assets/images/dp1.jpg",
+        "/dpwebsite/assets/images/dp3.jpg",
+        "/dpwebsite/assets/images/mandan-mishra.jpg",
+        "/dpwebsite/assets/images/shankh2.jpg",
+        "/dpwebsite/assets/images/shunkh.jpg",
+        "/dpwebsite/assets/images/vidyapati.jpg",
+        "/dpwebsite/assets/images/web-cover_1730381618.gif"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/dpwebsite/assets/icons/aarti.svg": "802390a8a442cc9d4906e410118152c302806f78",
+    "/dpwebsite/assets/icons/person.svg": "26c90984b87466ec8e3dbeea6e31cda5b08abf3f",
+    "/dpwebsite/assets/icons/youtube.svg": "bc22d1fe8c2b3360102352e24ebcdae338ba835a",
+    "/dpwebsite/assets/images/06-Maa-Katyayani.webp": "fb6134e6f27b110b6ef6aed267f61d6dabecefd1",
+    "/dpwebsite/assets/images/Day-4.png": "5c3cd3a133d6d491fba4191638dda5fa232dc457",
+    "/dpwebsite/assets/images/IMG-20251020-WA0014.jpg": "7d3a947e24967a3a82b326507e0e995efde4ac7f",
+    "/dpwebsite/assets/images/brahmCharni.jpg": "d9997889d165c082f64d3a0fdb4c049a1fe1e161",
+    "/dpwebsite/assets/images/day5.webp": "9166ab7e614ad82c3731d400e9493d869a3a3fb7",
+    "/dpwebsite/assets/images/day7.webp": "0b3ea3e4bb5ebb9122eb6c5dea0bccb133169593",
+    "/dpwebsite/assets/images/day8.webp": "c3dfad278ee6a2139ccbae1a63dd2a43bcafc9eb",
+    "/dpwebsite/assets/images/day9.jpg": "6c1c39ccf4a0140ce74f9412b87230ff94a30e94",
+    "/dpwebsite/assets/images/decorated-shankh.jpg": "718d71d958d5af2db0d3e56743c0fed0e489be10",
+    "/dpwebsite/assets/images/dp1.jpg": "14f6d6a00e9ec3cfadca2a15e5fe86d8bdb7963d",
+    "/dpwebsite/assets/images/dp3.jpg": "0863132ff8343b4ee0b5db8502e8399879eeab23",
+    "/dpwebsite/assets/images/mandan-mishra.jpg": "2808cea4ab57859daad637023a512cc8809c6cf6",
+    "/dpwebsite/assets/images/shankh2.jpg": "36f5fce87cacd0f9fe9cf5547fcfbe53fcb439ee",
+    "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
+    "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
+    "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
+    "/dpwebsite/chunk-2ZUG45BM.js": "96bd8688a2ebb5d82a8ab71941cd61899c0522eb",
+    "/dpwebsite/chunk-7ZITS56O.js": "ad772187def01c2fe1417544d58436d87565dc10",
+    "/dpwebsite/chunk-ALZGCUGL.js": "000c1afc1710693aec35345f65a9bc55904ab9d8",
+    "/dpwebsite/chunk-BCDKMLQV.js": "d298f4a811bd3b40f207bdcdd9ce0c4e1685aba2",
+    "/dpwebsite/chunk-ESXQSZVP.js": "90fa714a8259ea3b3c137587e6eb34cb700d7578",
+    "/dpwebsite/chunk-HP7J7LAN.js": "102f3229a238355af2418c4f4349ed74dcdd9b10",
+    "/dpwebsite/chunk-J5FYKYFJ.js": "729c6013e0f36ca01218167917ffa87bd7e25f13",
+    "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
+    "/dpwebsite/index.csr.html": "e56558f25930ecd7b4867487347123807fe310d8",
+    "/dpwebsite/main-YHGP6UHF.js": "d930606175e8fb982d37400c0ebc9e2b41838ac2",
+    "/dpwebsite/styles-HMM3YSRF.css": "829cc553b7793e7047e85f16d2bab3bf8287a454"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
