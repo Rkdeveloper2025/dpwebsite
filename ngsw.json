@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1765802751473,
-  "index": "/dpwebsite/index.csr.html",
+  "timestamp": 1765806722655,
+  "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -19,9 +19,9 @@
         "/dpwebsite/chunk-HP7J7LAN.js",
         "/dpwebsite/chunk-J5FYKYFJ.js",
         "/dpwebsite/favicon.ico",
-        "/dpwebsite/index.csr.html",
+        "/dpwebsite/index.html",
         "/dpwebsite/main-YHGP6UHF.js",
-        "/dpwebsite/styles-HMM3YSRF.css"
+        "/dpwebsite/styles-45KNZRUE.css"
       ],
       "patterns": []
     },
@@ -85,9 +85,9 @@
     "/dpwebsite/chunk-HP7J7LAN.js": "102f3229a238355af2418c4f4349ed74dcdd9b10",
     "/dpwebsite/chunk-J5FYKYFJ.js": "729c6013e0f36ca01218167917ffa87bd7e25f13",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.csr.html": "e56558f25930ecd7b4867487347123807fe310d8",
+    "/dpwebsite/index.html": "90f3b1db90431bc434ab54eb547e97a898618b42",
     "/dpwebsite/main-YHGP6UHF.js": "d930606175e8fb982d37400c0ebc9e2b41838ac2",
-    "/dpwebsite/styles-HMM3YSRF.css": "829cc553b7793e7047e85f16d2bab3bf8287a454"
+    "/dpwebsite/styles-45KNZRUE.css": "f510cbc17eedeb10c46a1870d47ac0d77a935102"
   },
   "navigationUrls": [
     {
