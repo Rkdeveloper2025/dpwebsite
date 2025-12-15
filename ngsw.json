@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1765806722655,
+  "timestamp": 1765811114033,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -11,17 +11,17 @@
         "ignoreVary": true
       },
       "urls": [
+        "/dpwebsite/chunk-2GVANILW.js",
         "/dpwebsite/chunk-2ZUG45BM.js",
         "/dpwebsite/chunk-7ZITS56O.js",
         "/dpwebsite/chunk-ALZGCUGL.js",
-        "/dpwebsite/chunk-BCDKMLQV.js",
         "/dpwebsite/chunk-ESXQSZVP.js",
-        "/dpwebsite/chunk-HP7J7LAN.js",
+        "/dpwebsite/chunk-EUUBF57O.js",
         "/dpwebsite/chunk-J5FYKYFJ.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-YHGP6UHF.js",
-        "/dpwebsite/styles-45KNZRUE.css"
+        "/dpwebsite/main-RMZNJ7E5.js",
+        "/dpwebsite/styles-MJKWCDL4.css"
       ],
       "patterns": []
     },
@@ -77,17 +77,17 @@
     "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
+    "/dpwebsite/chunk-2GVANILW.js": "7f1596b16a91eae55c4a07c52a89694c62b5a881",
     "/dpwebsite/chunk-2ZUG45BM.js": "96bd8688a2ebb5d82a8ab71941cd61899c0522eb",
     "/dpwebsite/chunk-7ZITS56O.js": "ad772187def01c2fe1417544d58436d87565dc10",
     "/dpwebsite/chunk-ALZGCUGL.js": "000c1afc1710693aec35345f65a9bc55904ab9d8",
-    "/dpwebsite/chunk-BCDKMLQV.js": "d298f4a811bd3b40f207bdcdd9ce0c4e1685aba2",
     "/dpwebsite/chunk-ESXQSZVP.js": "90fa714a8259ea3b3c137587e6eb34cb700d7578",
-    "/dpwebsite/chunk-HP7J7LAN.js": "102f3229a238355af2418c4f4349ed74dcdd9b10",
+    "/dpwebsite/chunk-EUUBF57O.js": "2986e3bf4fa3ee407f216c76d1a83ed7c8e55a1a",
     "/dpwebsite/chunk-J5FYKYFJ.js": "729c6013e0f36ca01218167917ffa87bd7e25f13",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "90f3b1db90431bc434ab54eb547e97a898618b42",
-    "/dpwebsite/main-YHGP6UHF.js": "d930606175e8fb982d37400c0ebc9e2b41838ac2",
-    "/dpwebsite/styles-45KNZRUE.css": "f510cbc17eedeb10c46a1870d47ac0d77a935102"
+    "/dpwebsite/index.html": "8385fa30a00cd21815edbfe749a8b2c3bd5a21a6",
+    "/dpwebsite/main-RMZNJ7E5.js": "f8377eca39472108c3cb118ec0ea7f7f72515b43",
+    "/dpwebsite/styles-MJKWCDL4.css": "dde2bd4f51eeac9f37da006b4285b457e75617e4"
   },
   "navigationUrls": [
     {
