@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+ role="img" aria-labelledby="aartiPlateTitle" fill="none" stroke="#FF0000"
+  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <title id="aartiPlateTitle">Aarti plate with three flames</title>
+  <!-- plate -->
+  <ellipse cx="16" cy="20" rx="12" ry="4" fill="none"/>
+  <!-- three flames -->
+  <g fill="#FF0000" stroke="#FF0000">
+    <path d="M11.5 12.5c-.9 1.3-1.6 2.1-1.6 3 0 1.2.8 2.2 1.6 2.2s1.6-1 1.6-2.2c0-.9-.7-1.7-1.6-3z"/>
+    <path d="M16 10.2c-1.2 1.8-2.1 3.1-2.1 4.4 0 1.5 1 2.8 2.1 2.8s2.1-1.3 2.1-2.8c0-1.3-.9-2.6-2.1-4.4z"/>
+    <path d="M20.5 12.5c-.9 1.3-1.6 2.1-1.6 3 0 1.2.8 2.2 1.6 2.2s1.6-1 1.6-2.2c0-.9-.7-1.7-1.6-3z"/>
+  </g>
+  <!-- small decoration on plate -->
+  <path d="M6 20c3-1.5 7.5-2.5 10-2.5s7 1 10 2.5" fill="none"/>
+</svg>

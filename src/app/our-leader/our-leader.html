@@ -1,0 +1,26 @@
+<div class=" sticky top-[78px] lg:top-0 z-20 p-2 mt-2 text-2xl bg-white rounded-2xl shadow-2xl text-center shadow-red-500  w-[350px] mx-auto">
+    <span aria-label="heading" class="font-bold text-shadow-2xs text-shadow-amber-300">&#128591; हमारे विभूति &#128591;</span>
+</div>
+<div class="ml-2 mr-2 mb-2 mt-[78px] lg:mt-2">
+ <mat-accordion class="w-full bg-red-500">
+
+
+    @for(leaderDetail of leaderList; track $index) {
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
+                    <mat-panel-title class="text-lg font-extrabold">
+                        <span aria-label="{{leaderDetail.title}}" class="w-full text-red-500 text-center text-shadow-2xs text-shadow-white">{{leaderDetail.title}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div>
+                  <img [src]="leaderDetail.image" class=" mt-5 w-full lg:w-1/2 h-1/6 lg:h-1/4 rounded-4xl shadow-2xl shadow-red-500 lg:mx-auto" alt="{{leaderDetail.title}}" />
+                    <div aria-label="leader-detail" class="p-2 mt-5 whitespace-pre-wrap text-left mx-auto text-2xl text-shadow-2xs font-bold bg-amber-400 rounded-2xl text-white text-shadow-red-500 overflow-y-auto">
+                        
+                            {{leaderDetail.detail}}
+                    </div>
+                </div>
+            </mat-expansion-panel>
+       
+    } 
+     </mat-accordion>  
+</div>

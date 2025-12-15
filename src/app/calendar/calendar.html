@@ -1,0 +1,124 @@
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+
+    </div>
+    <div class="sticky top-[78px] lg:top-2">
+        <div class="bg-amber-300 border-b border-default m-2 rounded-t-2xl text-shadow-2xs text-shadow-white">
+            <div class="flex justify-between text-2xl font-extrabold text-shadow-2xs p-2 text-shadow-white">
+                <div>
+                    {{monthList[selectedDate().getMonth()] + '  '+selectedDate().getFullYear()}}
+                </div>
+                <div>
+                    <span>{{selectedCalendar?.MoonMasa}},{{selectedCalendar?.vikramaYear}}</span>
+                </div>
+                
+            </div>
+            <div class="flex justify-between p-2 align-middle items-center border-t border-b border-default">
+                
+                <div class="text-lg">
+                    <span>{{selectedCalendar?.Tithi}},</span>
+                    <span>{{selectedCalendar?.Nakshatra}}</span>
+                </div>
+                <div class="flex-none flex items-center space-x-4 p-4"> 
+                    <button (click)="goToPreviousMonth()" class="text-2xl font-bold px-3 py-1 bg-amber-400 rounded hover:bg-amber-500 text-shadow-2xs">&#8592;</button>
+                    <button (click)="goToNextMonth()" class="text-2xl font-bold px-3 py-1 bg-amber-400 rounded hover:bg-amber-500 text-shadow-2xs">&#8594;</button>
+                </div>
+            </div>
+            
+            
+
+        </div>
+        <div class="text-shadow-white grid grid-cols-7 gap-1 text-center font-bold text-shadow-2xs rounded-b-2xl m-2 p-4 text-lg bg-amber-200 border-b border-default grid-rows-6 shadow-lg shadow-red-500" (click)="selecteDate($event)">
+            @for (day of dayList; track $index ) {
+                <div class="bg-amber-400 p-2 text-center rounded-sm shadow-lg shadow-red-500">{{day}}</div>
+            }
+            @for (dateNum of dateList(); track $index) {
+                @if (dateNum === 1 && selectedDate().getDate() === 1) {
+                    @if (firstDateOfMonth().getDay() === 0) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-1">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 1) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-2">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 2) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-3">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 3) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-4">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 4) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-5">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 5) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-6">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 6) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white col-start-7">{{dateNum}}</div>
+                    }
+                    
+                }
+                @else if (dateNum === 1) {
+                    @if (firstDateOfMonth().getDay() === 0) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-1">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 1) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-2">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 2) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-3">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 3) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-4">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 4) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-5">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 5) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-6">{{dateNum}}</div>
+                    }
+                    @else if (firstDateOfMonth().getDay() === 6) {
+                        <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white col-start-7">{{dateNum}}</div>
+                    }
+                }
+                @else if (dateNum === selectedDate().getDate()) {
+                    
+                    <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-white text-red-500 text-shadow-2xs text-shadow-white">{{dateNum}}</div>
+                
+                } 
+                @else {
+                    
+                    <div class="p-2 shadow-lg shadow-red-500 rounded-sm bg-amber-400 text-red-500 text-shadow-2xs text-shadow-white">{{dateNum}}</div>
+                
+                }
+                
+            }   
+        </div>
+    </div>
+    
+
+        
+         @if (panchangSunTimer) {
+           <!-- Panchang Details -->
+            <div class="mt-5">
+            <div class="bg-amber-300 m-2 p-4 border-2 border-red-500 shadow-lg shadow-red-500 rounded-2xl text-shadow-2xs">
+                <div class="text-xl font-extrabold mb-4 text-center border-b">पंचांग विवरण( {{dayList[panchangSunTimer.sunRise.getDay()]}}, {{panchangSunTimer.sunRise| date:'dd'}})</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
+                    @if(panchangData?.panchak != '') {
+                        <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">पंचक: </span>{{panchangData?.panchak}}</div>
+                    }
+                    
+                    <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">सूर्योदय:- </span>{{panchangSunTimer.sunRise | date:'hh:mm a'}}</div>
+                    <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">सूर्यास्त:- </span>{{panchangSunTimer.sunSet | date:'hh:mm a'}}</div>
+                    <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">तिथि:- </span>{{panchangData?.tithi}} ( {{panchangData?.tithiStartTime | date:'EEEE, MMMM d, y, h:mm:ss a'}} - {{panchangData?.tithiEndTime | date:'EEEE, MMMM d, y, h:mm:ss a'}})</div>
+                    <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">नक्षत्र:- </span>{{panchangData?.nakshatra}} ( {{panchangData?.nakshatraStartTime | date:'EEEE, MMMM d, y, h:mm:ss a'}} - {{panchangData?.nakshatraEndTime | date:'EEEE, MMMM d, y, h:mm:ss a'}})</div>
+                    <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">करण:- </span>{{panchangData?.karna}}</div>
+                    <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">योग:- </span>{{panchangData?.yoga}}</div>
+                    <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">राशि:- </span> {{panchangData?.rassi}}</div>
+                    <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">गण:- </span>{{panchangData?.gana}}</div>
+                    <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">गुण:- </span> {{panchangData?.guna}}</div>
+                </div>
+            </div>
+         </div>
+         }
+         
+    
+

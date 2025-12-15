@@ -1,0 +1,26 @@
+<div class="w-full pl-2 pr-2 pt-[78px] lg:pt-2 pb-0">
+  <img class="h-60 w-full object-contain rounded-2xl" src="assets/images/web-cover_1730381618.gif" alt="heading"/>
+</div>
+<div class=" sticky top-[78px] lg:top-0 z-10 p-2 mt-2 text-2xl bg-white rounded-2xl shadow-2xl text-center shadow-red-500  w-[350px] mx-auto">
+    <span aria-label="आरती संग्रह" class="font-bold text-shadow-2xs">आरती संग्रह</span>
+</div>
+<div class="ml-2 mr-2 mb-2 mt-2">
+ <mat-accordion class="w-full bg-red-500">
+
+
+    @for(aarti of aartiList(); track $index) {
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
+                    <mat-panel-title class="text-lg font-extrabold">
+                        <span aria-label="{{aarti.title}}" class="w-full text-red-500 text-center text-shadow-2xs text-shadow-white">{{aarti.title}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div aria-label="lyrics" class="p-2 whitespace-pre-wrap text-center mx-auto text-2xl text-shadow-2xs font-bold bg-amber-400 rounded-2xl text-white text-shadow-red-500 bg-[url('/assets/images/shunkh.jpg')] bg-cover bg-center bg-no-repeat">
+                    
+                        {{aarti.lyrics}}
+                </div>
+            </mat-expansion-panel>
+       
+    } 
+     </mat-accordion>  
+</div>

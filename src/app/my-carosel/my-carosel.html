@@ -1,0 +1,12 @@
+<div class="sticky top-[78px] lg:top-0 bg-fixed h-[50vh] lg:h-[60vh] bg-amber-200 flex justify-center content-start overflow-hidden">
+    @for (image of images(); track $index) {
+        <div class="h-96 w-full absolute transition-opacity duration-1000 ease-in-out" [class]="$index !== activatorIndex() ? 'opacity-0':'opacity-100'">
+            <img class="object-fill lg:object-contain w-full h-full"
+            
+             [src]="image.source"  [alt]="image.altText"/>
+        </div>
+        <div class="top-99 absolute text-4xl text-shadow-2xs text-shadow-white font-extrabold" [class]="$index !== activatorIndex() ? 'hidden':''">{{image.altText}}</div>
+
+    }
+    
+</div>

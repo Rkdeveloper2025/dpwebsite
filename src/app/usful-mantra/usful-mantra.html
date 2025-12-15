@@ -1,0 +1,32 @@
+<div class=" sticky top-[78px] lg:top-0 z-10 p-2 mt-2 text-2xl bg-white rounded-2xl shadow-2xl text-center shadow-red-500  w-[350px] mx-auto">
+    <span aria-label="उपयोगी मंत्र" class="font-bold text-shadow-2xs text-shadow-amber-300">&#x534D; उपयोगी मंत्र &#x534D;</span>
+</div>
+<div class="ml-2 mr-2 mb-2 mt-[78px] lg:mt-2">
+ <mat-accordion class="w-full bg-red-500">
+
+
+    @for(mantra of mantralist; track $index) {
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
+                    <mat-panel-title class="text-lg font-extrabold">
+                        <span aria-label="{{mantra.title}}" class="w-full text-red-500 text-left text-shadow-2xs text-shadow-white">{{mantra.title}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div>
+                    <div aria-label="mantra" class="p-2 whitespace-pre-wrap text-left mx-auto text-2xl text-shadow-2xs font-bold bg-amber-400 rounded-2xl text-white text-shadow-red-500">
+                    
+                            {{mantra.mantra}}
+                    </div>
+                    @if (mantra.meaning) {
+                    <div aria-label="meaning" class="p-2 mt-5 whitespace-pre-wrap text-left mx-auto text-2xl text-shadow-2xs font-bold bg-amber-400 rounded-2xl text-white text-shadow-red-500">
+                            <span>अर्थ:-</span>
+                            {{mantra.meaning}}
+                    </div>
+                    }
+                </div>
+                
+            </mat-expansion-panel>
+       
+    } 
+     </mat-accordion>  
+</div>
