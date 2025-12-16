@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1765885408362,
+  "timestamp": 1765885588331,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -35,6 +35,14 @@
       },
       "urls": [
         "/dpwebsite/assets/icons/aarti.svg",
+        "/dpwebsite/assets/icons/icon-128x128.png",
+        "/dpwebsite/assets/icons/icon-144x144.png",
+        "/dpwebsite/assets/icons/icon-152x152.png",
+        "/dpwebsite/assets/icons/icon-192x192.png",
+        "/dpwebsite/assets/icons/icon-384x384.png",
+        "/dpwebsite/assets/icons/icon-512x512.png",
+        "/dpwebsite/assets/icons/icon-72x72.png",
+        "/dpwebsite/assets/icons/icon-96x96.png",
         "/dpwebsite/assets/icons/person.svg",
         "/dpwebsite/assets/icons/youtube.svg",
         "/dpwebsite/assets/images/06-Maa-Katyayani.webp",
@@ -60,6 +68,14 @@
   "dataGroups": [],
   "hashTable": {
     "/dpwebsite/assets/icons/aarti.svg": "802390a8a442cc9d4906e410118152c302806f78",
+    "/dpwebsite/assets/icons/icon-128x128.png": "82d1c9e19fe01aa7b3d545dabf4dc9a702812421",
+    "/dpwebsite/assets/icons/icon-144x144.png": "07ae0f9d4afd5c131eb63bdee5ee3e5e312decc3",
+    "/dpwebsite/assets/icons/icon-152x152.png": "f6ba07ed82e907d778a227ce290f8190ce064280",
+    "/dpwebsite/assets/icons/icon-192x192.png": "bdd7efd6fdac8fe9611bfc74972b3dcb7d47453b",
+    "/dpwebsite/assets/icons/icon-384x384.png": "fa412540c8f9ac6dd8f9614e8047deedcf294313",
+    "/dpwebsite/assets/icons/icon-512x512.png": "02d2c6a91a4eb4596238bcea71734d0dfd4b654f",
+    "/dpwebsite/assets/icons/icon-72x72.png": "eb052448a74765f5052adb5925f5549ec32b1d94",
+    "/dpwebsite/assets/icons/icon-96x96.png": "8fb2c65eabaf38fbe31c914f209999fe41e3367c",
     "/dpwebsite/assets/icons/person.svg": "26c90984b87466ec8e3dbeea6e31cda5b08abf3f",
     "/dpwebsite/assets/icons/youtube.svg": "bc22d1fe8c2b3360102352e24ebcdae338ba835a",
     "/dpwebsite/assets/images/06-Maa-Katyayani.webp": "fb6134e6f27b110b6ef6aed267f61d6dabecefd1",
