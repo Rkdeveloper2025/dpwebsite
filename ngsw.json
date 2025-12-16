@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1765884295644,
+  "timestamp": 1765885408362,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -21,6 +21,7 @@
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
         "/dpwebsite/main-O4FJNWKI.js",
+        "/dpwebsite/manifest.webmanifest",
         "/dpwebsite/styles-3RFR5YQE.css"
       ],
       "patterns": []
@@ -87,6 +88,7 @@
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
     "/dpwebsite/index.html": "5b2502bdb9c0aae506681df04bed88e3a1af410f",
     "/dpwebsite/main-O4FJNWKI.js": "aa81a936418501d828d1989ba735f7eed94bfa60",
+    "/dpwebsite/manifest.webmanifest": "83c6cd02e7e398bd68fe78ca1740dbb4e924074c",
     "/dpwebsite/styles-3RFR5YQE.css": "944dac4a4b9c409df1f25f4f585b43d89fee6885"
   },
   "navigationUrls": [
