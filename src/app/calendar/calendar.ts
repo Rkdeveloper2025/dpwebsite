@@ -89,8 +89,8 @@ export class Calendar {
         dt.setMonth(this.selectedDate().getMonth());
         dt.setDate(val);
 
-        /* this.selectedDate.set(dt);
-        this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude); */
+        // this.selectedDate.set(dt);
+        this.selectedCalendar = GetPanchangData(dt, this.lattitude, this.longitude);
         this.panchangData = GetPanchangCalcuculation(dt);
             this.panchangSunTimer = GetSunTimer(dt, this.lattitude, this.longitude);
     }

@@ -7,6 +7,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
    export const MonthList = ['जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'];
 
   export const HindiMonths = [
+    'चैत्र',
     'वैशाख',
     'ज्येष्ठ',
     'आषाढ़',
@@ -18,7 +19,6 @@ import Sanscript  from '@indic-transliteration/sanscript';
     'पौष',
     'माघ',
     'फाल्गुन',
-    'चैत्र',
   ];
   export const HindiThithis = [
     'शुक्ल प्रतिपदा',
@@ -149,6 +149,10 @@ import Sanscript  from '@indic-transliteration/sanscript';
       longitude
     );
     //console.log('CALENDAR',calData);
+    // Conversion from Amant month to puurnimant
+    let monthIndex = calData.Paksha.ino == 1 ? (calData.MoonMasa.ino + 1) : calData.MoonMasa.ino;
+    if (monthIndex == 12)
+      monthIndex = 0;
     return {
       Tithi: HindiThithis[calData.Tithi.ino],//Sanscript.t(calData.Tithi.name_en_IN, 'iso','devanagari'),
       Paksha: PakshaList[calData.Paksha.ino],//Sanscript.t(calData.Paksha.name_en_IN, 'iso','devanagari'),
@@ -156,7 +160,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
       Yoga: Sanscript.t(calData.Yoga.name_en_IN, 'iso','devanagari'),
       Karna: Sanscript.t(calData.Karna.name_en_IN, 'iso','devanagari'),
       Masa: HindiMonths[calData.Masa.ino],//Sanscript.t(calData.Masa.name_en_IN, 'iso','devanagari'),
-      MoonMasa: HindiMonths[calData.MoonMasa.ino],//Sanscript.t(calData.MoonMasa.name_en_IN, 'iso','devanagari'),
+      MoonMasa: HindiMonths[monthIndex],//Sanscript.t(calData.MoonMasa.name_en_IN, 'iso','devanagari'),
       //Raasi: Sanscript.t(calData.Raasi.name_en_IN, 'iso ','devanagari'),
      // Ritu: Sanscript.t(calData.Ritu.name_en_IN, 'iso ','devanagari'),
       Gana: Sanscript.t(calData.Gana.name_en_IN, 'iso','devanagari'),
