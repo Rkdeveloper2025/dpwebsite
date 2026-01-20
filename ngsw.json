@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1768813493385,
+  "timestamp": 1768918623046,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -11,16 +11,16 @@
         "ignoreVary": true
       },
       "urls": [
+        "/dpwebsite/chunk-3NWQBA4E.js",
         "/dpwebsite/chunk-7ZITS56O.js",
         "/dpwebsite/chunk-EBWVLVPJ.js",
         "/dpwebsite/chunk-ESXQSZVP.js",
         "/dpwebsite/chunk-GYHM6G7G.js",
         "/dpwebsite/chunk-J5FYKYFJ.js",
-        "/dpwebsite/chunk-KKLFO25K.js",
         "/dpwebsite/chunk-SPYW45BD.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-JVQPNKSG.js",
+        "/dpwebsite/main-ZYYIPWGB.js",
         "/dpwebsite/manifest.webmanifest",
         "/dpwebsite/styles-3RFR5YQE.css"
       ],
@@ -94,16 +94,16 @@
     "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
+    "/dpwebsite/chunk-3NWQBA4E.js": "1c9faf388467353da12108d14e9661ee7e89916a",
     "/dpwebsite/chunk-7ZITS56O.js": "ad772187def01c2fe1417544d58436d87565dc10",
     "/dpwebsite/chunk-EBWVLVPJ.js": "3848bf74b30e9d24e4fb2ad3307f8cfc77176690",
     "/dpwebsite/chunk-ESXQSZVP.js": "90fa714a8259ea3b3c137587e6eb34cb700d7578",
     "/dpwebsite/chunk-GYHM6G7G.js": "37fb826a905a7321f3ce9c8c7d17ac6f6fda533f",
     "/dpwebsite/chunk-J5FYKYFJ.js": "729c6013e0f36ca01218167917ffa87bd7e25f13",
-    "/dpwebsite/chunk-KKLFO25K.js": "22c192c4c3e195c574930a89bb5a6f50af587d95",
     "/dpwebsite/chunk-SPYW45BD.js": "f0c8622fed3d3bb2f500d4379b289634fe1480e8",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "a002e6ab40ee492683cf0b6248a3e96efc55ca0b",
-    "/dpwebsite/main-JVQPNKSG.js": "33250cefe7bb7f664ab846ae326e2f4dcb49bbf1",
+    "/dpwebsite/index.html": "d0729b381b544525a439e60526b7b9292f3bc980",
+    "/dpwebsite/main-ZYYIPWGB.js": "8b0c3967d397065e07abe53a62a75b3f7a8835b2",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
     "/dpwebsite/styles-3RFR5YQE.css": "944dac4a4b9c409df1f25f4f585b43d89fee6885"
   },
