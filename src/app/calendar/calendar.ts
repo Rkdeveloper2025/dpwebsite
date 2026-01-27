@@ -29,7 +29,7 @@ export class Calendar {
    vratList = signal<Array<VratDetail>>([]);
    todaysVrat:string|undefined;
    constructor(private changeDetector:ChangeDetectorRef) {
-    /* if ('geolocation' in navigator) {
+    if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition((position) => {
             this.lattitude = position.coords.latitude;
             this.longitude = position.coords.longitude;
@@ -42,13 +42,13 @@ export class Calendar {
                });       
         }
         else 
-        {  */
+        { 
             this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
             this.panchangData = GetPanchangCalcuculation(this.selectedDate());
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
             this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
             this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
-       // }
+        }
                
     
     //console.log(this.selectedCalendar);
