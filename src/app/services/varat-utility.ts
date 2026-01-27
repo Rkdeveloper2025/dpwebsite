@@ -844,7 +844,7 @@ export const getVratDetailByHinMonthAndTithi = (hindiMonth:string,calanderData:C
       }
       if (CheckHoli(calanderData,panchangData,sunTimer)) {
         vratDetail = {
-          name: "होली",
+          name: "होलिका दहन",
           date: sunTimer.sunRise.getDate()
         };
       }
