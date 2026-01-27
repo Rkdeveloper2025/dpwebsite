@@ -582,7 +582,7 @@ export const CheckGuruPurnima = (calanderData:CalendarData,panchangCal:DisplayPa
  */
 export const PrepareVratForDateRange = (startDate:Date,endDate:Date,latitude:number,longitude:number):VratDetail[]=>{  
   let vratList:VratDetail[] = [];
-  let currentDate = new Date(startDate);
+  let currentDate = new Date(startDate.getFullYear(),startDate.getMonth(),startDate.getDate());
   while(currentDate.getMonth() === endDate.getMonth() && currentDate.getDate() <= endDate.getDate()){
     let calData = GetPanchangData(currentDate,latitude,longitude);
     let panchangCalculation = GetPanchangCalcuculation(currentDate)
