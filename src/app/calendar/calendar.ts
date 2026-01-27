@@ -1,11 +1,15 @@
 import { ChangeDetectorRef, Component, inject, signal } from '@angular/core';
-import { CalendarData, DisplayPanchangData, SunTimer } from '../Models/panchang-types';
+import { CalendarData, DisplayPanchangData, SunTimer, VratDetail } from '../Models/panchang-types';
 import { CommonModule } from '@angular/common';
 import { DayList, GetPanchangCalcuculation, GetPanchangData, GetSunTimer, MonthList } from '../services/panchang-utility';
+import {MatTabsModule} from '@angular/material/tabs';
+import { PrepareVratForDateRange } from '../services/varat-utility';
+import { MatExpansionModule } from "@angular/material/expansion";
+
 
 @Component({
   selector: 'app-calendar',
-  imports: [CommonModule],
+  imports: [CommonModule, MatTabsModule, MatExpansionModule],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css',
 })
@@ -21,8 +25,11 @@ export class Calendar {
    longitude:number = 86.0712;
    panchangData:DisplayPanchangData | undefined;
    panchangSunTimer:SunTimer | undefined;
+   activeTabIndex = 0;
+   vratList = signal<Array<VratDetail>>([]);
+   todaysVrat:string|undefined;
    constructor(private changeDetector:ChangeDetectorRef) {
-    if ('geolocation' in navigator) {
+    /* if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition((position) => {
             this.lattitude = position.coords.latitude;
             this.longitude = position.coords.longitude;
@@ -30,14 +37,18 @@ export class Calendar {
             this.panchangData = GetPanchangCalcuculation(this.selectedDate());
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
             this.changeDetector.detectChanges();
+            this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
+            this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
                });       
         }
         else 
-        {
+        {  */
             this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
             this.panchangData = GetPanchangCalcuculation(this.selectedDate());
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
-        }
+            this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
+            this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
+       // }
                
     
     //console.log(this.selectedCalendar);
@@ -67,6 +78,8 @@ export class Calendar {
         this.panchangData = GetPanchangCalcuculation(this.selectedDate());
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
         this.populateDateList();
+        this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
+        this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
     }
     goToNextMonth() {
         let dt = new Date();
@@ -81,6 +94,8 @@ export class Calendar {
         this.panchangData = GetPanchangCalcuculation(this.selectedDate());
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
         this.populateDateList();
+        this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
+        this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
     }
     selecteDate(event: any) {
         let val = +event.target.innerText;
@@ -93,6 +108,7 @@ export class Calendar {
         this.selectedCalendar = GetPanchangData(dt, this.lattitude, this.longitude);
         this.panchangData = GetPanchangCalcuculation(dt);
             this.panchangSunTimer = GetSunTimer(dt, this.lattitude, this.longitude);
+        this.todaysVrat = this.vratList().filter(vrat => vrat.date === dt.getDate()).map(vrat => vrat.name).join(',');
     }
    
 }

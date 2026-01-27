@@ -91,18 +91,24 @@
         </div>
     </div>
     
-
-        
+<mat-tab-group class="m-2 mt-0 ">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span class="text-xl font-extrabold text-red-500">पंचांग विवरण</span>
+        </ng-template>
          @if (panchangSunTimer) {
            <!-- Panchang Details -->
-            <div class="mt-5">
+            <div>
+<div class="mt-5">
             <div class="bg-amber-300 m-2 p-4 border-2 border-red-500 shadow-lg shadow-red-500 rounded-2xl text-shadow-2xs">
                 <div class="text-xl font-extrabold mb-4 text-center border-b">पंचांग विवरण( {{dayList[panchangSunTimer.sunRise.getDay()]}}, {{panchangSunTimer.sunRise| date:'dd'}})</div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
                     @if(panchangData?.panchak != '') {
                         <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">पंचक: </span>{{panchangData?.panchak}}</div>
                     }
-                    
+                    @if(todaysVrat != '') {
+                        <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">व्रत और त्यौहार: </span>{{todaysVrat}}</div>
+                    }
                     <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">सूर्योदय:- </span>{{panchangSunTimer.sunRise | date:'hh:mm a'}}</div>
                     <div class="bg-amber-200 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">सूर्यास्त:- </span>{{panchangSunTimer.sunSet | date:'hh:mm a'}}</div>
                     <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">तिथि:- </span>{{panchangData?.tithi}} ( {{panchangData?.tithiStartTime | date:'EEEE, MMMM d, y, h:mm:ss a'}} - {{panchangData?.tithiEndTime | date:'EEEE, MMMM d, y, h:mm:ss a'}})</div>
@@ -114,8 +120,52 @@
                     <div class="bg-amber-100 p-2 shadow-lg shadow-red-500 rounded-lg"><span class="font-bold">गुण:- </span> {{panchangData?.guna}}</div>
                 </div>
             </div>
+            </div>
+            
          </div>
          }
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span class="text-xl font-extrabold text-red-500">व्रत और त्यौहार</span>
+        </ng-template>
+        @if (vratList().length > 0) {
+            <div class="mt-5">
+                <div class="bg-amber-300 m-2 p-4 border-2 border-red-500 shadow-lg shadow-red-500 rounded-2xl text-shadow-2xs">
+                    <div class="text-xl font-extrabold mb-4 text-center border-b">व्रत और त्यौहार({{monthList[selectedDate().getMonth()]}})</div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
+                        @for (vrat of vratList(); track $index) {
+                            @if ($index%2 === 0) {
+                                <div class="bg-amber-200 p-2 flex shadow-lg shadow-red-500 rounded-lg">
+                                    <div class="w-[100px] text-center">{{vrat.date}}</div>
+                                    <div class="font-bold text-lg">{{vrat.name}}</div>
+                                    <!-- <div class="mt-2">{{vrat.description}}</div> -->
+                                </div>
+                            } 
+                            @else {
+                                <div class="bg-amber-100 p-2 flex shadow-lg shadow-red-500 rounded-lg">
+                                    <div class="w-[100px] text-center">{{vrat.date}}</div>
+                                    <div class="font-bold text-lg">{{vrat.name}}</div>
+                                    <!-- <div class="mt-2">{{vrat.description}}</div> -->
+                                </div>
+                            }
+                            
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+        @else {
+            <div class="mt-5">
+                <div class="bg-amber-300 m-2 p-4 border-2 border-red-500 shadow-lg shadow-red-500 rounded-2xl text-shadow-2xs">
+                    <div class="text-xl font-extrabold mb-4 text-center border-b">व्रत विवरण({{monthList[selectedDate().getMonth()]}})</div>
+                    <div class="text-center text-lg">अय महीना कुनु व्रत और त्यौहार नै अय।</div>
+                </div>
+            </div>
+        }
+    </mat-tab>    
+</mat-tab-group>        
+        
          
     
 

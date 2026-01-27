@@ -166,7 +166,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
       Gana: Sanscript.t(calData.Gana.name_en_IN, 'iso','devanagari'),
       Guna: Sanscript.t(calData.Guna.name_en_IN, 'iso','devanagari'),
       Trinity: Sanscript.t(calData.Trinity.name_en_IN, 'iso','devanagari'),
-      vikramaYear: GetVikramaYear(date, calData.MoonMasa.ino),
+      vikramaYear: GetVikramaYear(date, monthIndex),
     }
   }
   /**
@@ -176,7 +176,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
    * It returns a number which is Vikram samvat
    **/
   export const GetVikramaYear =(date: Date,masaCount: number): number | undefined => {
-    if (date.getMonth() < 5 && [7,8,9,10].includes(masaCount)) {
+    if (date.getMonth() < 5 && [7,8,9,10,11].includes(masaCount)) {
       return date.getFullYear() + 56;
     } else {
       return date.getFullYear() + 57;
@@ -185,6 +185,13 @@ import Sanscript  from '@indic-transliteration/sanscript';
   export const GetPanchangCalcuculation =(date:Date): DisplayPanchangData => {
     const mhahPanchang = new MhahPanchang();
     const panchangData:PanchangData = mhahPanchang.calculate(date);
+    if (panchangData.Tithi.ino == 29)
+    {
+      let localData = new Date(date);
+      localData.setDate(date.getDate() + 1);
+      panchangData.Tithi.end = mhahPanchang.calculate(localData).Tithi.start;
+    }
+       
     const returnData:DisplayPanchangData = {
       tithi: HindiThithis[panchangData.Tithi.ino],
       tithiEndTime: panchangData.Tithi.end,

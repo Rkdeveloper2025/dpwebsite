@@ -61,3 +61,7 @@ export interface  DisplayPanchangData{
     trinity: string;
     panchak?:string;
 }
+export interface VratDetail {
+    name: string;
+    date: number;
+}
