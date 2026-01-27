@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1769519778184,
+  "timestamp": 1769519892251,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -12,15 +12,15 @@
       },
       "urls": [
         "/dpwebsite/chunk-4QJZOORO.js",
-        "/dpwebsite/chunk-6MQYZ5Z3.js",
         "/dpwebsite/chunk-FBI72ILJ.js",
         "/dpwebsite/chunk-FWBYHBO5.js",
         "/dpwebsite/chunk-GIUGRQPK.js",
         "/dpwebsite/chunk-J3M4DK52.js",
+        "/dpwebsite/chunk-UE2F62OK.js",
         "/dpwebsite/chunk-ZVYXWXUH.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-CQ5FKUB7.js",
+        "/dpwebsite/main-CKM527FJ.js",
         "/dpwebsite/manifest.webmanifest",
         "/dpwebsite/styles-R6OAIQYK.css"
       ],
@@ -95,15 +95,15 @@
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
     "/dpwebsite/chunk-4QJZOORO.js": "b41d4988b0c228999b972e34d52e55d03c442ac0",
-    "/dpwebsite/chunk-6MQYZ5Z3.js": "2f060d8ceeed0aae2a48a828d3d7f8db9ee79223",
     "/dpwebsite/chunk-FBI72ILJ.js": "b1ee9289b8e8f6a96d6461c9cd221df943862006",
     "/dpwebsite/chunk-FWBYHBO5.js": "b35cec331cfb63606b844eac3faa8987f99d1cbb",
     "/dpwebsite/chunk-GIUGRQPK.js": "2544e9733d94cea64755de6b1f7b167248d0e4f3",
     "/dpwebsite/chunk-J3M4DK52.js": "7847a00d9386137ab70286f175f3aaf6a7575a18",
+    "/dpwebsite/chunk-UE2F62OK.js": "58d61558f5c910c89624f611152abea946bab5d7",
     "/dpwebsite/chunk-ZVYXWXUH.js": "c1b63177a5a7852e41236df091b4662ca41c4418",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "5f510f73c9dffc77a801778b0984d495c18df49c",
-    "/dpwebsite/main-CQ5FKUB7.js": "1db4c9ad0b23e99c3968e0f801e09e3e21af9d22",
+    "/dpwebsite/index.html": "78317fe6e60e69d88a7096ce74cca4d331a08dd6",
+    "/dpwebsite/main-CKM527FJ.js": "78a4fafa7cf8a6611ed1f1ec9a4198e29dd77339",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
     "/dpwebsite/styles-R6OAIQYK.css": "c452a8e8d0e7b6422c688db12f296c8c48394881"
   },
