@@ -266,7 +266,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
     let backMonthIndex = backCalData.Paksha.ino == 1 ? (backCalData.MoonMasa.ino + 1) : backCalData.MoonMasa.ino;
     if (backMonthIndex == 12)
       backMonthIndex = 0;
-    if (monthIndex < backMonthIndex || (monthIndex === backMonthIndex && calData.Paksha.ino === 1))
+    if (backMonthIndex !== 11 &&monthIndex < backMonthIndex || (monthIndex === backMonthIndex && calData.Paksha.ino === 1))
       return { isAdhimassa: true, masaName: HindiMonths[backMonthIndex] + ' अधिमास' };
     else
       return { isAdhimassa: false };
