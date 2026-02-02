@@ -150,15 +150,12 @@ export const CheckPitripaksh = (calanderData:CalendarData,panchangCal:DisplayPan
 /**
  * Jimutvahana Vrat determination
  * It is celebrated on Ashtami of the Krishna Paksha of the Ashwin month
- * Sunset is considered for deciding the tithi
  */
 export const CheckJimutvahanaVrat = (calanderData:CalendarData,panchangCal:DisplayPanchangData,sunTimer:SunTimer):boolean =>{
   let returnData = false;
   if (HindiMonths[6] === calanderData.MoonMasa &&
-    panchangCal.tithi === HindiThithis[22] &&
-    sunTimer.sunSet.getTime() >= panchangCal.tithiStartTime.getTime() &&
-    sunTimer.sunSet.getTime() < panchangCal.tithiEndTime.getTime())
-    returnData = true;
+    panchangCal.tithi === HindiThithis[22])
+      returnData = true;
   return returnData;
 }
 /**
@@ -247,21 +244,37 @@ export const CheckKojagra = (calanderData:CalendarData,panchangCal:DisplayPancha
     panchangCal.tithi === HindiThithis[14] &&
     sunTimer.sunSet.getTime() >= panchangCal.tithiStartTime.getTime() &&
     sunTimer.sunSet.getTime() < panchangCal.tithiEndTime.getTime())
-    returnData = true;
+      returnData = true;
+  else if (HindiMonths[6] === calanderData.MoonMasa &&
+    panchangCal.tithi === HindiThithis[13]) {
+      let nextDayPanCalulation = GetPanchangCalcuculation(panchangCal.tithiEndTime);
+      let nextDaySunSet = new Date(sunTimer.sunSet);
+      nextDaySunSet.setDate(nextDaySunSet.getDate() + 1);
+      if (nextDaySunSet.getTime() >= nextDayPanCalulation.tithiEndTime.getTime())
+        returnData = true;
+    }
   return returnData;
 }
 /**
  * Diwali determination
  * It is celebrated on Amavasya of the Kartik month
- * Sunrise has been considered for deciding the tithi
+ * SunSet has been considered for deciding the tithi
  */
 export const CheckDiwali = (calanderData:CalendarData,panchangCal:DisplayPanchangData,sunTimer:SunTimer):boolean =>{
   let returnData = false;
   if (HindiMonths[7] === calanderData.MoonMasa &&
     panchangCal.tithi === HindiThithis[29] &&
-    sunTimer.sunRise.getTime() >= panchangCal.tithiStartTime.getTime() &&
-    sunTimer.sunRise.getTime() < panchangCal.tithiEndTime.getTime())
+    sunTimer.sunSet.getTime() >= panchangCal.tithiStartTime.getTime() &&
+    sunTimer.sunSet.getTime() < panchangCal.tithiEndTime.getTime())
     returnData = true;
+  else if (HindiMonths[7] === calanderData.MoonMasa &&
+    panchangCal.tithi === HindiThithis[28]) {
+      let nextDayPanCalulation = GetPanchangCalcuculation(panchangCal.tithiEndTime);
+      let nextDaySunSet = new Date(sunTimer.sunSet);
+      nextDaySunSet.setDate(nextDaySunSet.getDate() + 1);
+      if (nextDaySunSet.getTime() >= nextDayPanCalulation.tithiEndTime.getTime())
+        returnData = true;
+  }
   return returnData;
 }
 /**
@@ -425,7 +438,7 @@ export const CheckIndependenceDay = (date:Date):boolean =>{
 /**
  * Maha Shivratri determination
  * It is celebrated on the 14th day of the dark fortnight of the Phalgun month
- * Sunset has been considered for deciding the tithi
+ * SunSet has been considered for deciding the tithi
  */ 
 export const CheckMahaShivratri = (calanderData:CalendarData,panchangCal:DisplayPanchangData,sunTimer:SunTimer):boolean =>{
   let returnData = false;
@@ -434,6 +447,14 @@ export const CheckMahaShivratri = (calanderData:CalendarData,panchangCal:Display
     sunTimer.sunSet.getTime() >= panchangCal.tithiStartTime.getTime() &&
     sunTimer.sunSet.getTime() < panchangCal.tithiEndTime.getTime())
     returnData = true;
+  else if (HindiMonths[11] === calanderData.MoonMasa &&
+    panchangCal.tithi === HindiThithis[27]) {
+      let nextDayPanCalulation = GetPanchangCalcuculation(panchangCal.tithiEndTime);
+      let nextDaySunSet = new Date(sunTimer.sunSet);
+      nextDaySunSet.setDate(nextDaySunSet.getDate() + 1);
+      if (nextDaySunSet.getTime() >= nextDayPanCalulation.tithiEndTime.getTime())
+        returnData = true;
+    }
   return returnData;
 } 
 /**
@@ -448,6 +469,15 @@ export const CheckHoli = (calanderData:CalendarData,panchangCal:DisplayPanchangD
     sunTimer.sunSet.getTime() >= panchangCal.tithiStartTime.getTime() &&
     sunTimer.sunSet.getTime() < panchangCal.tithiEndTime.getTime())
     returnData = true;
+  else if (HindiMonths[11] === calanderData.MoonMasa &&
+    panchangCal.tithi === HindiThithis[13]) {
+      let nextDayPanCalulation = GetPanchangCalcuculation(panchangCal.tithiEndTime);
+      let nextDaySunSet = new Date(sunTimer.sunSet);
+      nextDaySunSet.setDate(nextDaySunSet.getDate() + 1);
+      if (nextDaySunSet.getTime() >= nextDayPanCalulation.tithiEndTime.getTime())
+        returnData = true;
+    }
+    
   return returnData;
 }
 /**
@@ -585,11 +615,14 @@ export const PrepareVratForDateRange = (startDate:Date,endDate:Date,latitude:num
   let currentDate = new Date(startDate);
   while(currentDate.getMonth() === endDate.getMonth() && currentDate.getDate() <= endDate.getDate()){
     let calData = GetPanchangData(currentDate,latitude,longitude);
-    let panchangCalculation = GetPanchangCalcuculation(currentDate)
     let sunTimer = GetSunTimer(currentDate,latitude,longitude);
+    let panchangCalculation = GetPanchangCalcuculation(sunTimer.sunRise)
     let vratDetail = getVratDetailByHinMonthAndTithi(calData.MoonMasa,calData,panchangCalculation,sunTimer);
     if(vratDetail.name !== ""){
       vratList.push(vratDetail);
+      if (vratDetail.name === "होलिका दहन") {
+        vratList.push({name:"होली",date:(vratDetail.date + 1 )});
+      }
     }
     currentDate.setDate(currentDate.getDate() + 1);
   }
@@ -859,7 +892,7 @@ export const getVratDetailByHinMonthAndTithi = (hindiMonth:string,calanderData:C
         date: sunTimer.sunRise.getDate()
       };
     }
-  if (CheckVishwakarmaPuja(sunTimer.sunRise)) {
+  if (!/अधिमास/gi.test(hindiMonth) && CheckVishwakarmaPuja(sunTimer.sunRise)) {
       vratDetail = {
         name: "विश्वकर्मा पूजा",
         date: sunTimer.sunRise.getDate()
@@ -877,14 +910,17 @@ export const getVratDetailByHinMonthAndTithi = (hindiMonth:string,calanderData:C
         date: sunTimer.sunRise.getDate()
       };
     }
-    if (CheckSomvatiAmavas(sunTimer.sunRise,panchangData,sunTimer)) {
+    if (!/अधिमास/gi.test(hindiMonth) && CheckSomvatiAmavas(sunTimer.sunRise,panchangData,sunTimer)) {
       vratDetail = {
         name: "सोमवती अमावस्या",
         date: sunTimer.sunRise.getDate()
       };
     }
     if (CheckEkadshiVrat(sunTimer.sunRise,panchangData,sunTimer)) {
-      let ekadashiName = EkadashiList.find(ekadashi=>ekadashi.hindiMonth === calanderData.MoonMasa && ekadashi.paksha === calanderData.Paksha)?.name ?? "एकादशी व्रत";
+      let ekadashiName = EkadashiList.find(ekadashi=> ekadashi.hindiMonth === calanderData.MoonMasa && ekadashi.paksha === calanderData.Paksha)?.name ?? '';
+      if (!ekadashiName && /अधिमास/gi.test(hindiMonth)) {
+         ekadashiName = EkadashiList.find(ekadashi=> ekadashi.paksha === calanderData.Paksha && ekadashi.hindiMonth === 'अधिमास')?.name ?? '';
+      }
       vratDetail = {
         name: ekadashiName,
         date: sunTimer.sunRise.getDate()
@@ -1013,4 +1049,14 @@ export const EkadashiList = [
     hindiMonth: HindiMonths[11],
     paksha: 'कृष्ण',
   },
+  {
+    name:'पद्मिनी एकादशी',
+    hindiMonth: 'अधिमास',
+    paksha: 'शुक्ल',
+  },
+  {
+    name:'परमा एकादशी',
+    hindiMonth: 'अधिमास',
+    paksha: 'कृष्ण',
+  }
 ];

@@ -1,5 +1,5 @@
 import { MhahPanchang } from 'mhah-panchang';
-import { CalendarData, DisplayPanchangData, PanchangData, SunTimer } from '../Models/panchang-types';
+import { AdhimassaDetail, CalendarData, DisplayPanchangData, PanchangData, SunTimer } from '../Models/panchang-types';
 import Sanscript  from '@indic-transliteration/sanscript';
 
 
@@ -153,6 +153,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
     let monthIndex = calData.Paksha.ino == 1 ? (calData.MoonMasa.ino + 1) : calData.MoonMasa.ino;
     if (monthIndex == 12)
       monthIndex = 0;
+    const adhimassDetail = DetermineAdhimass(date, latitude, longitude);
     return {
       Tithi: HindiThithis[calData.Tithi.ino],//Sanscript.t(calData.Tithi.name_en_IN, 'iso','devanagari'),
       Paksha: PakshaList[calData.Paksha.ino],//Sanscript.t(calData.Paksha.name_en_IN, 'iso','devanagari'),
@@ -160,7 +161,7 @@ import Sanscript  from '@indic-transliteration/sanscript';
       Yoga: Sanscript.t(calData.Yoga.name_en_IN, 'iso','devanagari'),
       Karna: Sanscript.t(calData.Karna.name_en_IN, 'iso','devanagari'),
       Masa: HindiMonths[calData.Masa.ino],//Sanscript.t(calData.Masa.name_en_IN, 'iso','devanagari'),
-      MoonMasa: HindiMonths[monthIndex],//Sanscript.t(calData.MoonMasa.name_en_IN, 'iso','devanagari'),
+      MoonMasa: adhimassDetail.isAdhimassa ? adhimassDetail.masaName : HindiMonths[monthIndex],//Sanscript.t(calData.MoonMasa.name_en_IN, 'iso','devanagari'),
       //Raasi: Sanscript.t(calData.Raasi.name_en_IN, 'iso ','devanagari'),
      // Ritu: Sanscript.t(calData.Ritu.name_en_IN, 'iso ','devanagari'),
       Gana: Sanscript.t(calData.Gana.name_en_IN, 'iso','devanagari'),
@@ -239,5 +240,35 @@ import Sanscript  from '@indic-transliteration/sanscript';
       return 'भादवा(पंचक) चैल रहल अय।';
     else
       return '';
+  }
+  /**
+   * Determination of Adhimassa
+   */
+  export const DetermineAdhimass = (date: Date, latitude: number, longitude: number):AdhimassaDetail => {
+    const mhahPanchang = new MhahPanchang();
+    let calData: CalendarData = mhahPanchang.calendar(
+      date,
+      latitude,
+      longitude
+    );
+    //console.log('CALENDAR',calData);
+    // Conversion from Amant month to puurnimant
+    let monthIndex = calData.Paksha.ino == 1 ? (calData.MoonMasa.ino + 1) : calData.MoonMasa.ino;
+    if (monthIndex == 12)
+      monthIndex = 0;
+    const backDate = new Date(date);
+    backDate.setDate(date.getDate() - calData.Tithi.ino - 1);
+    let backCalData: CalendarData = mhahPanchang.calendar(
+      backDate,
+      latitude,
+      longitude
+    );
+    let backMonthIndex = backCalData.Paksha.ino == 1 ? (backCalData.MoonMasa.ino + 1) : backCalData.MoonMasa.ino;
+    if (backMonthIndex == 12)
+      backMonthIndex = 0;
+    if (monthIndex < backMonthIndex || (monthIndex === backMonthIndex && calData.Paksha.ino === 1))
+      return { isAdhimassa: true, masaName: HindiMonths[backMonthIndex] + ' अधिमास' };
+    else
+      return { isAdhimassa: false };
   }
 

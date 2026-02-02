@@ -34,8 +34,8 @@ export class Calendar {
             this.lattitude = position.coords.latitude;
             this.longitude = position.coords.longitude;
             this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
-            this.panchangData = GetPanchangCalcuculation(this.selectedDate());
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
+            this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
             this.changeDetector.detectChanges();
             this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
             this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
@@ -44,8 +44,8 @@ export class Calendar {
         else 
         { 
             this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
-            this.panchangData = GetPanchangCalcuculation(this.selectedDate());
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
+            this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
             this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
             this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
         }
@@ -75,8 +75,8 @@ export class Calendar {
         this.firstDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth(), 1,0,0,0,0));
         this.lastDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 1, 0,0,0,0,0));
         this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
-        this.panchangData = GetPanchangCalcuculation(this.selectedDate());
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
+        this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
         this.populateDateList();
         this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
         this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
@@ -91,8 +91,8 @@ export class Calendar {
         this.firstDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth(), 1,0,0,0,0));
         this.lastDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 1, 0,0,0,0,0));
         this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
-        this.panchangData = GetPanchangCalcuculation(this.selectedDate());
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
+        this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
         this.populateDateList();
         this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
         this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
@@ -106,8 +106,8 @@ export class Calendar {
 
         // this.selectedDate.set(dt);
         this.selectedCalendar = GetPanchangData(dt, this.lattitude, this.longitude);
-        this.panchangData = GetPanchangCalcuculation(dt);
-            this.panchangSunTimer = GetSunTimer(dt, this.lattitude, this.longitude);
+        this.panchangSunTimer = GetSunTimer(dt, this.lattitude, this.longitude);
+        this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
         this.todaysVrat = this.vratList().filter(vrat => vrat.date === dt.getDate()).map(vrat => vrat.name).join(',');
     }
    

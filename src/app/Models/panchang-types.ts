@@ -65,3 +65,7 @@ export interface VratDetail {
     name: string;
     date: number;
 }
+export interface AdhimassaDetail {
+    isAdhimassa: boolean;
+    masaName?: string;
+}
