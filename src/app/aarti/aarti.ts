@@ -9,5 +9,6 @@ import { Aartilist, AartiObj } from '../Models/aarti';
   styleUrl: './aarti.css',
 })
 export class Aarti {
+  selectedAartiIndex = 0;
    aartiList = signal<AartiObj[]>(Aartilist)
 }

@@ -8,5 +8,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-color: red !important;
 }
 
+.custom-accordion {
+  --mat-expansion-header-indicator-color: #ef4444; /* Tailwind's red-500 hex */
+}
+
 
 

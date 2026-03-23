@@ -16,7 +16,7 @@ export class MyCarosel implements OnDestroy {
   
 
    interval$ = interval(5000).subscribe(() => {
-    console.log('Interval fired');
+    //console.log('Interval fired');
     this.activatorIndex.update((currentIndex:number) => {
         if (currentIndex + 1 >= this.images()?.length) {
             return 0;

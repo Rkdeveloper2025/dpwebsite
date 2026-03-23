@@ -30,32 +30,32 @@ export class Calendar {
    todaysVrat:string|undefined;
    constructor(private changeDetector:ChangeDetectorRef) {
     if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition((position) => {
-            this.lattitude = position.coords.latitude;
-            this.longitude = position.coords.longitude;
-            this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
-            this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
-            this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
-            this.changeDetector.detectChanges();
-            this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
-            this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
-               });       
+        try {
+            navigator.geolocation.getCurrentPosition((position) => {
+                this.lattitude = position.coords.latitude;
+                this.longitude = position.coords.longitude;
+                this.initiatePanchang();
+               });  
+            }
+            finally {
+                this.initiatePanchang();
+            }     
         }
         else 
         { 
+            this.initiatePanchang();
+        }
+     //console.log(this.selectedCalendar);
+    this.populateDateList();
+   }
+   
+   initiatePanchang() {
             this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
             this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
             this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
             this.vratList.set(PrepareVratForDateRange(this.firstDateOfMonth(),this.lastDateOfMonth(), this.lattitude, this.longitude));
             this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
-        }
-               
-    
-    //console.log(this.selectedCalendar);
-    this.populateDateList();
    }
-   
-   
    populateDateList() {
        let dateCount= 1;
        let dateCountArray = []
@@ -66,14 +66,21 @@ export class Calendar {
         this.dateList.set(dateCountArray);
     }
     goToPreviousMonth() {
+        this.firstDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() - 1, 1,0,0,0,0));
+        this.lastDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth(), 0,0,0,0,0));
+
         let dt = new Date();
-        dt.setFullYear(this.selectedDate().getFullYear());
-        dt.setMonth(this.selectedDate().getMonth() -1);
-        dt.setDate(this.selectedDate().getDate());
+        dt.setFullYear(this.lastDateOfMonth().getFullYear());
+        dt.setMonth(this.lastDateOfMonth().getMonth());
+
+        if(this.lastDateOfMonth().getDate() < this.selectedDate().getDate()) {
+            dt.setDate(this.lastDateOfMonth().getDate());
+        } else {
+            dt.setDate(this.selectedDate().getDate());
+        }
 
         this.selectedDate.set(dt);
-        this.firstDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth(), 1,0,0,0,0));
-        this.lastDateOfMonth.set( new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 1, 0,0,0,0,0));
+       
         this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
         this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);
@@ -82,14 +89,20 @@ export class Calendar {
         this.todaysVrat = this.vratList().filter(vrat => vrat.date === this.selectedDate().getDate()).map(vrat => vrat.name).join(',');
     }
     goToNextMonth() {
+        this.firstDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 1, 1,0,0,0,0));
+        this.lastDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 2, 0,0,0,0,0));
+
         let dt = new Date();
-        dt.setFullYear(this.selectedDate().getFullYear());
-        dt.setMonth(this.selectedDate().getMonth() + 1);
-        dt.setDate(this.selectedDate().getDate());
+        dt.setFullYear(this.lastDateOfMonth().getFullYear());
+        dt.setMonth(this.lastDateOfMonth().getMonth());
+        if (this.lastDateOfMonth().getDate() < this.selectedDate().getDate()) {
+            dt.setDate(this.lastDateOfMonth().getDate());
+        } else {
+            dt.setDate(this.selectedDate().getDate());
+        }
 
         this.selectedDate.set(dt);
-        this.firstDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth(), 1,0,0,0,0));
-        this.lastDateOfMonth.set(new Date(this.selectedDate().getFullYear(), this.selectedDate().getMonth() + 1, 0,0,0,0,0));
+       
         this.selectedCalendar = GetPanchangData(this.selectedDate(), this.lattitude, this.longitude);
         this.panchangSunTimer = GetSunTimer(this.selectedDate(), this.lattitude, this.longitude);
         this.panchangData = GetPanchangCalcuculation(this.panchangSunTimer.sunRise);

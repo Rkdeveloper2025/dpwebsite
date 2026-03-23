@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsfulMantra } from './usful-mantra';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('UsfulMantra', () => {
   let component: UsfulMantra;
@@ -8,7 +9,8 @@ describe('UsfulMantra', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UsfulMantra]
+      imports: [UsfulMantra],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
@@ -19,5 +21,9 @@ describe('UsfulMantra', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have mantraList array', () => {
+    expect(component.mantralist.length).toBeGreaterThan(0);
   });
 });

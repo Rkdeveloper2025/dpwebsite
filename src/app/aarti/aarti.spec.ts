@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Aarti } from './aarti';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Aarti', () => {
   let component: Aarti;
@@ -8,7 +9,8 @@ describe('Aarti', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Aarti]
+      imports: [Aarti],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
@@ -20,4 +22,13 @@ describe('Aarti', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have aarti list', () => {
+    expect(component.aartiList().length).toBeGreaterThan(0);
+  });
+
+  it ('should have selectedAartiIndex initialized to 0', () => {
+    expect(component.selectedAartiIndex).toBe(0);
+  });
+
 });

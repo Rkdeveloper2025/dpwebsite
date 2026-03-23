@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const Aartilist:AartiObj[] = [
     {
         title:'🌸 मां जगजननी जय जय आरती 🌸',

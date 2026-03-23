@@ -2,11 +2,11 @@
     <span aria-label="heading" class="font-bold text-shadow-2xs text-shadow-amber-300">&#128591; हमारे विभूति &#128591;</span>
 </div>
 <div class="ml-2 mr-2 mb-2 mt-[78px] lg:mt-2">
- <mat-accordion class="w-full bg-red-500">
+ <mat-accordion class="w-full bg-red-500 custom-accordion">
 
 
     @for(leaderDetail of leaderList; track $index) {
-            <mat-expansion-panel hideToggle>
+            <mat-expansion-panel>
                 <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
                     <mat-panel-title class="text-lg font-extrabold">
                         <span aria-label="{{leaderDetail.title}}" class="w-full text-red-500 text-center text-shadow-2xs text-shadow-white">{{leaderDetail.title}}</span>

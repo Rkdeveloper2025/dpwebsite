@@ -1,12 +1,12 @@
 <div class=" sticky top-[78px] lg:top-0 z-10 p-2 mt-2 text-2xl bg-white rounded-2xl shadow-2xl text-center shadow-red-500  w-[350px] mx-auto">
     <span aria-label="उपयोगी मंत्र" class="font-bold text-shadow-2xs text-shadow-amber-300">|| उपयोगी मंत्र ||</span>
 </div>
-<div class="ml-2 mr-2 mb-2 mt-[78px] lg:mt-2">
- <mat-accordion class="w-full bg-red-500">
+<div class="ml-2 mr-2  mb-2 mt-[78px] lg:mt-2">
+ <mat-accordion class="w-full bg-red-500 custom-accordion">
 
 
     @for(mantra of mantralist; track $index) {
-            <mat-expansion-panel hideToggle>
+            <mat-expansion-panel>
                 <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
                     <mat-panel-title class="text-lg font-extrabold">
                         <span aria-label="{{mantra.title}}" class="w-full text-red-500 text-left text-shadow-2xs text-shadow-white">{{mantra.title}}</span>
