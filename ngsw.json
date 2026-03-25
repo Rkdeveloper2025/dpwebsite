@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774272437395,
+  "timestamp": 1774435593259,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -11,8 +11,8 @@
         "ignoreVary": true
       },
       "urls": [
-        "/dpwebsite/chunk-EM5IT6HZ.js",
         "/dpwebsite/chunk-ESPXOMXA.js",
+        "/dpwebsite/chunk-FV3OI37H.js",
         "/dpwebsite/chunk-K3EHO7RH.js",
         "/dpwebsite/chunk-KFMUD3SQ.js",
         "/dpwebsite/chunk-QO7DMYNZ.js",
@@ -20,7 +20,7 @@
         "/dpwebsite/chunk-ZJNHTK4C.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-2JG4SK25.js",
+        "/dpwebsite/main-EMTV225O.js",
         "/dpwebsite/manifest.webmanifest",
         "/dpwebsite/styles-URHOUPUC.css"
       ],
@@ -96,16 +96,16 @@
     "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
-    "/dpwebsite/chunk-EM5IT6HZ.js": "8d7ac064bef107682ead651b90a8d9657b20031c",
     "/dpwebsite/chunk-ESPXOMXA.js": "c5bbafd2e524e044245ee70e69bb0d6c82504a79",
+    "/dpwebsite/chunk-FV3OI37H.js": "e184afc593c63ed7e54aca3154bc39a3514bfb52",
     "/dpwebsite/chunk-K3EHO7RH.js": "fa37fe246c8ced856fa4ed837e18182bdb61796b",
     "/dpwebsite/chunk-KFMUD3SQ.js": "f40e389f4b94b53cb5840f41e796d1f1f781c88d",
     "/dpwebsite/chunk-QO7DMYNZ.js": "c23c463338be3e4d8b1567891f1e005a224b3096",
     "/dpwebsite/chunk-TBJM6HPE.js": "1149e72864a868c488815c3c34ed3dd3d66d97eb",
     "/dpwebsite/chunk-ZJNHTK4C.js": "5a706d90f0993da7e56da9ff25739174acb2701d",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "0fc58fd249b70c094b0df53f27ecea0a7a2f727e",
-    "/dpwebsite/main-2JG4SK25.js": "d006b74b35300a3e84d7841aa5ccde398e7d08c4",
+    "/dpwebsite/index.html": "f5c55c7b36b8d002707b254610fda0bfb5cf161f",
+    "/dpwebsite/main-EMTV225O.js": "e9c0307740048f652fbafcfb1f277818e5b75537",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
     "/dpwebsite/styles-URHOUPUC.css": "2d887298826c98bed30480c0bcf18013423cac8a"
   },
