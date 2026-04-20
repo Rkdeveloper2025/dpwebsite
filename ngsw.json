@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774435593259,
+  "timestamp": 1776692227405,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -20,7 +20,7 @@
         "/dpwebsite/chunk-ZJNHTK4C.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-EMTV225O.js",
+        "/dpwebsite/main-N4MDNNLR.js",
         "/dpwebsite/manifest.webmanifest",
         "/dpwebsite/styles-URHOUPUC.css"
       ],
@@ -49,6 +49,7 @@
         "/dpwebsite/assets/images/Day-4.png",
         "/dpwebsite/assets/images/IMG-20251020-WA0014.jpg",
         "/dpwebsite/assets/images/brahmCharni.jpg",
+        "/dpwebsite/assets/images/content.png",
         "/dpwebsite/assets/images/day5.webp",
         "/dpwebsite/assets/images/day7.webp",
         "/dpwebsite/assets/images/day8.webp",
@@ -83,6 +84,7 @@
     "/dpwebsite/assets/images/Day-4.png": "5c3cd3a133d6d491fba4191638dda5fa232dc457",
     "/dpwebsite/assets/images/IMG-20251020-WA0014.jpg": "7d3a947e24967a3a82b326507e0e995efde4ac7f",
     "/dpwebsite/assets/images/brahmCharni.jpg": "d9997889d165c082f64d3a0fdb4c049a1fe1e161",
+    "/dpwebsite/assets/images/content.png": "ba72fb3cc0f9f24df5f6b3d36f56561df6cf420b",
     "/dpwebsite/assets/images/day5.webp": "9166ab7e614ad82c3731d400e9493d869a3a3fb7",
     "/dpwebsite/assets/images/day7.webp": "0b3ea3e4bb5ebb9122eb6c5dea0bccb133169593",
     "/dpwebsite/assets/images/day8.webp": "c3dfad278ee6a2139ccbae1a63dd2a43bcafc9eb",
@@ -104,8 +106,8 @@
     "/dpwebsite/chunk-TBJM6HPE.js": "1149e72864a868c488815c3c34ed3dd3d66d97eb",
     "/dpwebsite/chunk-ZJNHTK4C.js": "5a706d90f0993da7e56da9ff25739174acb2701d",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "f5c55c7b36b8d002707b254610fda0bfb5cf161f",
-    "/dpwebsite/main-EMTV225O.js": "e9c0307740048f652fbafcfb1f277818e5b75537",
+    "/dpwebsite/index.html": "51aa9f3dd910dacba897e00688cb23b18f14e707",
+    "/dpwebsite/main-N4MDNNLR.js": "99add996d27bf544c709779defb38cb9e6f29119",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
     "/dpwebsite/styles-URHOUPUC.css": "2d887298826c98bed30480c0bcf18013423cac8a"
   },
