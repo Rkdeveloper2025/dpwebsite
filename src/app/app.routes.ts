@@ -24,7 +24,7 @@ export const routes: Routes = [
     },
     {
         path:'leaders',
-        title:'हमारे विभूति',
+        title:'हमर विभूति',
         loadComponent: () => import('./our-leader/our-leader').then(m => m.OurLeader)
     },
     {
