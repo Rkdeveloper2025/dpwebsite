@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1780145415294,
+  "timestamp": 1780149520294,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -11,18 +11,18 @@
         "ignoreVary": true
       },
       "urls": [
-        "/dpwebsite/chunk-4ACKUYO4.js",
         "/dpwebsite/chunk-5W3ELVNV.js",
+        "/dpwebsite/chunk-5YWHAJUD.js",
         "/dpwebsite/chunk-CLRHJNCU.js",
-        "/dpwebsite/chunk-IMBZB2HQ.js",
-        "/dpwebsite/chunk-SUUZUYSZ.js",
+        "/dpwebsite/chunk-FWILJEPO.js",
+        "/dpwebsite/chunk-JWS7DIBO.js",
         "/dpwebsite/chunk-VQHPDKCR.js",
-        "/dpwebsite/chunk-XP5JZTUK.js",
+        "/dpwebsite/chunk-YHQDYXJD.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-C3W3D2MK.js",
+        "/dpwebsite/main-KHPXFWKC.js",
         "/dpwebsite/manifest.webmanifest",
-        "/dpwebsite/styles-NUPK25NR.css"
+        "/dpwebsite/styles-SSTJCAWY.css"
       ],
       "patterns": []
     },
@@ -98,18 +98,18 @@
     "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
-    "/dpwebsite/chunk-4ACKUYO4.js": "be487b0a7344c458060eb331f21c3b3c232b05eb",
     "/dpwebsite/chunk-5W3ELVNV.js": "92332cc954a559f1957f103a980ebfde0ee79244",
+    "/dpwebsite/chunk-5YWHAJUD.js": "c0f510f71c5c23cb51194053a4a58d65bfaa769c",
     "/dpwebsite/chunk-CLRHJNCU.js": "c38b7606b43fc216d5869b12557d8b1a653c8e71",
-    "/dpwebsite/chunk-IMBZB2HQ.js": "c9cb3334c33adfddf270c02723338707bed8d769",
-    "/dpwebsite/chunk-SUUZUYSZ.js": "639b9a964c327faac51c0a3486ef2772b34f2f47",
+    "/dpwebsite/chunk-FWILJEPO.js": "be08e998221035a98b86c6fa3052663d3d495679",
+    "/dpwebsite/chunk-JWS7DIBO.js": "f989698fc9890e560e65205cd3979b90e11dd786",
     "/dpwebsite/chunk-VQHPDKCR.js": "fb94a2ff505d99de73005caf1f8b5198df9a91e1",
-    "/dpwebsite/chunk-XP5JZTUK.js": "e8a01ad5a1a57816657b9be3f222f7ee11da5b1a",
+    "/dpwebsite/chunk-YHQDYXJD.js": "ed41fd3e7f7f1aac7792680b5be53c0dbff035b5",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "bc246f6543e6b313453c9bf47931856303b4aff1",
-    "/dpwebsite/main-C3W3D2MK.js": "20e42a3e8db728eab7cff6088fe9913e0dde5bbd",
+    "/dpwebsite/index.html": "60a2acd98b974df7f5e86ea73b66729e7767d40c",
+    "/dpwebsite/main-KHPXFWKC.js": "08d5a14ba6b78abbf568a356a2c3d3f3281982e1",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
-    "/dpwebsite/styles-NUPK25NR.css": "d3655271c26f526abec01f6d90d885cfc390754a"
+    "/dpwebsite/styles-SSTJCAWY.css": "e406779ba14c166f73409ceec808116bc93519e4"
   },
   "navigationUrls": [
     {
