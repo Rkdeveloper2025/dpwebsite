@@ -1,26 +1,36 @@
-<div class=" sticky top-[78px] lg:top-0 z-20 p-2 mt-2 text-2xl bg-white rounded-2xl shadow-2xl text-center shadow-red-500  w-[350px] mx-auto">
-    <span aria-label="heading" class="font-bold text-shadow-2xs text-shadow-amber-300">&#128591; हमारे विभूति &#128591;</span>
-</div>
-<div class="ml-2 mr-2 mb-2 mt-[78px] lg:mt-2">
- <mat-accordion class="w-full bg-red-500 custom-accordion">
+<div class=" px-4 pb-6 lg:px-6">
+  <div class="sticky top-[78px]  z-20 mx-auto max-w-xl bg-linear-to-r from-red-500 via-orange-500 to-amber-300 text-white rounded-3xl shadow-2xl shadow-red-500/20 py-4 px-5 text-center">
+    <h1 aria-label="heading" class="text-xl sm:text-2xl font-bold tracking-wide">
+      🙏 हमर विभूति 🙏
+    </h1>
+  </div>
 
+  <div class="mt-4">
+    <mat-accordion class="w-full space-y-4">
+      @for(leaderDetail of leaderList; track $index) {
+        <mat-expansion-panel class="overflow-hidden rounded-[28px] shadow-xl transition-shadow duration-300 hover:shadow-red-400/30">
+          <mat-expansion-panel-header class="bg-white/90 backdrop-blur-sm rounded-[28px] border border-amber-200">
+            <mat-panel-title class="text-base sm:text-lg font-semibold text-red-600">
+              <span aria-label="{{leaderDetail.title}}" class="w-full text-center block">
+                {{leaderDetail.title}}
+              </span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
 
-    @for(leaderDetail of leaderList; track $index) {
-            <mat-expansion-panel>
-                <mat-expansion-panel-header class="bg-amber-300 rounded-2xl">
-                    <mat-panel-title class="text-lg font-extrabold">
-                        <span aria-label="{{leaderDetail.title}}" class="w-full text-red-500 text-center text-shadow-2xs text-shadow-white">{{leaderDetail.title}}</span>
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div>
-                  <img [src]="leaderDetail.image" class=" mt-5 w-full lg:w-1/2 h-1/6 lg:h-1/4 rounded-4xl shadow-2xl shadow-red-500 lg:mx-auto" alt="{{leaderDetail.title}}" loading="lazy" />
-                    <div aria-label="leader-detail" class="p-2 mt-5 whitespace-pre-wrap text-left mx-auto text-2xl text-shadow-2xs font-bold bg-amber-400 rounded-2xl text-white text-shadow-red-500 overflow-y-auto">
-                        
-                            {{leaderDetail.detail}}
-                    </div>
-                </div>
-            </mat-expansion-panel>
-       
-    } 
-     </mat-accordion>  
+          <div class="bg-gradient-to-br from-amber-50 via-orange-50 to-white p-4 sm:p-5">
+            <img
+              [src]="leaderDetail.image"
+              alt="{{leaderDetail.title}}"
+              loading="lazy"
+              class="w-full max-w-full h-56 sm:h-72 object-cover rounded-[28px] shadow-2xl shadow-red-200 mx-auto"
+            />
+
+            <div class="mt-4 rounded-[28px] bg-white/95 p-4 sm:p-5 text-sm sm:text-base leading-relaxed text-gray-800 shadow-inner border border-amber-200">
+              {{leaderDetail.detail}}
+            </div>
+          </div>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
 </div>

@@ -1,66 +1,73 @@
-<div class="container relative mx-auto h-full bg-amber-200 text-red-600 overflow-x-hidden">
-    <div class="fixed w-full z-50 p-2 h-[70px] text-center  font-bold text-red-500 text-shadow-2xs text-shadow-white bg-[url('/dpwebsite/assets/images/IMG-20251020-WA0014.jpg')] bg-cover bg-center">
-        <h1 class="text-2xl bg-auto">श्री श्री १०८ दुर्गा पूजा समिति हरसुवार</h1>
-        <span class="text-lg">( स्थापित १९९२ )</span>
+<div class="min-h-screen relative overflow-x-hidden bg-gradient-to-b from-amber-100 via-amber-200 to-orange-100 text-red-700">
+  <header class="fixed inset-x-0 top-0 z-50 h-[80px] bg-[url('/dpwebsite/assets/images/IMG-20251020-WA0014.jpg')] bg-cover bg-center shadow-2xl">
+    <div class="h-full w-full bg-black/20 backdrop-blur-sm flex flex-col justify-center items-center px-4 text-center">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg">
+        श्री श्री १०८ दुर्गा पूजा समिति हरसुवार
+      </h1>
+      <p class="text-sm sm:text-base text-amber-100 mt-1">( स्थापित १९९२ )</p>
     </div>
-    <div class=" block lg:relative lg:flex w-full h-full pb-[70px] lg:pt-[140px] lg:pb-0 overflow-x-hidden overflow-y-auto">
-        <div class="w-[25vw] h-full bg-blue-200 hidden lg:block sticky top-0">
-            <img src="assets/images/place-view.jpg" alt="Place View" class="w-full h-full object-cover"/>
+  </header>
+
+  <main class="pt-[100px] pb-28 lg:pt-[100px] lg:pb-0 absolute">
+    <div class="mx-auto flex flex-col lg:flex-row max-w-screen-2xl  relative">
+      <aside class="hidden lg:block lg:w-[22vw] sticky top-[100px] h-[calc(100vh-200px)] pl-8">
+        <div class="h-full rounded-[36px] overflow-hidden shadow-2xl">
+          <img src="assets/images/place-view.jpg" alt="Place View" class="w-full h-full object-cover"/>
         </div>
-        <div class="w-full lg:w-[50vw] mb-[30px]">
-            <router-outlet />
-            <div class="hidden lg:block h-2 w-full"></div>
+      </aside>
+
+      <section class="w-full lg:mb-[100px] lg:w-[56vw] px-4 lg:px-6">
+        <div class="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-2xl border border-amber-200 p-4 sm:p-6 lg:p-8">
+          <router-outlet />
         </div>
-        
-        <div class="w-[25vw] bg-blue-200 hidden lg:block sticky top-0">
-            <img src="assets/images/decorated-shankh.jpg" alt="Place View" class="w-full h-full object-cover"/>
+      </section>
+
+      <aside class="hidden lg:block lg:w-[22vw] sticky top-[100px] h-[calc(100vh-200px)] pr-8">
+        <div class="h-full rounded-[36px] overflow-hidden shadow-2xl">
+          <img src="assets/images/decorated-shankh.jpg" alt="Decorated Shankh" class="w-full h-full object-cover"/>
         </div>
+      </aside>
     </div>
-   
-    
-    <!-- navigation -->
-   <nav class="fixed bottom-0 lg:top-[70px] left-0 z-50 w-full h-16 bg-amber-400 border-t lg:border-b border-amber-400 border-default">
-      <div class="grid h-full max-w-full grid-cols-4 mx-auto font-medium">
-          <button type="button" routerLinkActive="bg-amber-500" class="inline-flex lg:flex-row items-center justify-center px-5 hover:bg-neutral-secondary-medium group text-2xl lg:cursor-pointer hover:bg-amber-500" routerLink="/home">
-              <span class="font-extrabold">&#2384;</span>
-              <span class="hidden lg:inline lg:text-2xl lg:ml-2 ">मां जगजननी</span>
-          </button>
-          <button type="button" routerLinkActive="bg-amber-500" class="inline-flex lg:flex-row items-center justify-center px-5 hover:bg-neutral-secondary-medium group lg:cursor-pointer hover:bg-amber-500" routerLink="/calendar">
-              <mat-icon aria-hidden="false" aria-label="calendar-icon" fontIcon="calendar_today"></mat-icon>
-              <span class="hidden lg:inline lg:text-2xl lg:ml-2 ">पंचांग</span>
-          </button>
-          <button type="button" routerLinkActive="bg-amber-500" class="inline-flex lg:flex-row items-center justify-center px-5 hover:bg-neutral-secondary-medium group text-2xl lg:cursor-pointer hover:bg-amber-500" routerLink="/aarti">
-              <!-- <span>&#x1F525;</span> -->
-               <img src="assets/icons/aarti.svg" alt="Aarti Icon" class="w-10 h-10"/>
-               <span class="hidden lg:inline lg:text-2xl lg:ml-2 ">आरती</span>
-          </button>
-          <button type="button" class="inline-flex lg:flex-row items-center justify-center px-5 hover:bg-neutral-secondary-medium group text-2xl lg:cursor-pointer hover:bg-amber-500" [matMenuTriggerFor]="navMenu">
-              <mat-icon aria-hidden="false" aria-label="menu-icon" fontIcon="menu"></mat-icon>
-              <span class="hidden lg:inline lg:text-2xl lg:ml-2 ">अन्य</span>
-          </button>
-      </div>
-    </nav>
-  
+  </main>
+
+  <nav class="fixed inset-x-0 bottom-0 z-50 border-t border-amber-300 bg-amber-400/95 backdrop-blur-sm shadow-xl">
+    <div class="mx-auto grid max-w-4xl grid-cols-4">
+      <button type="button" routerLink="/home" routerLinkActive="bg-amber-500" class="inline-flex flex-col items-center justify-center gap-1 py-3 text-red-800 transition hover:bg-amber-500">
+        <span class="text-2xl font-extrabold">&#2384;</span>
+        <span class="text-xs sm:text-sm font-semibold">मां जगजननी</span>
+      </button>
+
+      <button type="button" routerLink="/calendar" routerLinkActive="bg-amber-500" class="inline-flex flex-col items-center justify-center gap-1 py-3 text-red-800 transition hover:bg-amber-500">
+        <mat-icon aria-hidden="false" aria-label="calendar-icon" fontIcon="calendar_today"></mat-icon>
+        <span class="text-xs sm:text-sm font-semibold">पंचांग</span>
+      </button>
+
+      <button type="button" routerLink="/aarti" routerLinkActive="bg-amber-500" class="inline-flex flex-col items-center justify-center gap-1 py-3 text-red-800 transition hover:bg-amber-500">
+        <img src="assets/icons/aarti.svg" alt="Aarti Icon" class="w-8 h-8"/>
+        <span class="text-xs sm:text-sm font-semibold">आरती</span>
+      </button>
+
+      <button type="button" [matMenuTriggerFor]="navMenu" class="inline-flex flex-col items-center justify-center gap-1 py-3 text-red-800 transition hover:bg-amber-500">
+        <mat-icon aria-hidden="false" aria-label="menu-icon" fontIcon="menu"></mat-icon>
+        <span class="text-xs sm:text-sm font-semibold">अन्य</span>
+      </button>
+    </div>
+  </nav>
 </div>
 
-<!-- Navigation menu -->
- <mat-menu #navMenu="matMenu" class="bg-amber-300!">
-    
-        <button mat-menu-item class="hover:bg-amber-500!" routerLink="/leaders">
-            <img src="assets/icons/person.svg" class="inline" width="24"/>
-            <span class=" ml-2 text-lg font-bold text-red-500 "> हमर विभूति</span>
-        </button>
-        <button mat-menu-item class="hover:bg-amber-500!" routerLink="/useful-mantra">
-            <span class="font-extrabold text-red-500">&#2384;</span>
-            <span class="ml-5 text-lg font-bold text-red-500 ">किछू उपयोगी मंत्र</span>
-        </button>
-        <a mat-menu-item class="flex" class="hover:bg-amber-500!" href="https://youtube.com/channel/UCjPXRasfLq-trjZ5vSYgiDg?si=rEEw5EYl3wKswHh7" target="_blank">
-            <img src="assets/icons/youtube.svg" class="inline" width="24"/>
-            <span class="ml-4 font-bold text-lg text-red-500 ">गैलरी</span>
-        </a>
-        
-        
-        
-     
-</mat-menu>
+<mat-menu #navMenu="matMenu" class="rounded-3xl bg-amber-100 py-2 px-1 shadow-2xl">
+  <button mat-menu-item routerLink="/leaders" class="rounded-2xl px-4 py-3 transition hover:bg-amber-300">
+    <img src="assets/icons/person.svg" class="inline w-5 h-5" alt="Leaders"/>
+    <span class="ml-3 text-base font-bold text-red-600">हमर विभूति</span>
+  </button>
 
+  <button mat-menu-item routerLink="/useful-mantra" class="rounded-2xl px-4 py-3 transition hover:bg-amber-300">
+    <span class="font-extrabold text-red-600">&#2384;</span>
+    <span class="ml-3 text-base font-bold text-red-600">किछू उपयोगी मंत्र</span>
+  </button>
+
+  <a mat-menu-item href="https://youtube.com/channel/UCjPXRasfLq-trjZ5vSYgiDg?si=rEEw5EYl3wKswHh7" target="_blank" rel="noreferrer" class="rounded-2xl px-4 py-3 transition hover:bg-amber-300">
+    <img src="assets/icons/youtube.svg" class="inline w-5 h-5" alt="Gallery"/>
+    <span class="ml-3 text-base font-bold text-red-600">गैलरी</span>
+  </a>
+</mat-menu>
