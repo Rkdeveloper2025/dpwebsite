@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1776694921009,
+  "timestamp": 1780145415294,
   "index": "/dpwebsite/index.html",
   "assetGroups": [
     {
@@ -11,18 +11,18 @@
         "ignoreVary": true
       },
       "urls": [
-        "/dpwebsite/chunk-ESPXOMXA.js",
-        "/dpwebsite/chunk-FV3OI37H.js",
-        "/dpwebsite/chunk-K3EHO7RH.js",
-        "/dpwebsite/chunk-KFMUD3SQ.js",
-        "/dpwebsite/chunk-QO7DMYNZ.js",
-        "/dpwebsite/chunk-TBJM6HPE.js",
-        "/dpwebsite/chunk-ZJNHTK4C.js",
+        "/dpwebsite/chunk-4ACKUYO4.js",
+        "/dpwebsite/chunk-5W3ELVNV.js",
+        "/dpwebsite/chunk-CLRHJNCU.js",
+        "/dpwebsite/chunk-IMBZB2HQ.js",
+        "/dpwebsite/chunk-SUUZUYSZ.js",
+        "/dpwebsite/chunk-VQHPDKCR.js",
+        "/dpwebsite/chunk-XP5JZTUK.js",
         "/dpwebsite/favicon.ico",
         "/dpwebsite/index.html",
-        "/dpwebsite/main-N4MDNNLR.js",
+        "/dpwebsite/main-C3W3D2MK.js",
         "/dpwebsite/manifest.webmanifest",
-        "/dpwebsite/styles-URHOUPUC.css"
+        "/dpwebsite/styles-NUPK25NR.css"
       ],
       "patterns": []
     },
@@ -98,18 +98,18 @@
     "/dpwebsite/assets/images/shunkh.jpg": "b5cd329f86384e87e4adaff36c479abb517c194f",
     "/dpwebsite/assets/images/vidyapati.jpg": "0e2b52c3fa656858baf30dae3eb6493610a28f8f",
     "/dpwebsite/assets/images/web-cover_1730381618.gif": "672373d26548cacb1768ff6aac71eb9195f99c29",
-    "/dpwebsite/chunk-ESPXOMXA.js": "c5bbafd2e524e044245ee70e69bb0d6c82504a79",
-    "/dpwebsite/chunk-FV3OI37H.js": "e184afc593c63ed7e54aca3154bc39a3514bfb52",
-    "/dpwebsite/chunk-K3EHO7RH.js": "fa37fe246c8ced856fa4ed837e18182bdb61796b",
-    "/dpwebsite/chunk-KFMUD3SQ.js": "f40e389f4b94b53cb5840f41e796d1f1f781c88d",
-    "/dpwebsite/chunk-QO7DMYNZ.js": "c23c463338be3e4d8b1567891f1e005a224b3096",
-    "/dpwebsite/chunk-TBJM6HPE.js": "1149e72864a868c488815c3c34ed3dd3d66d97eb",
-    "/dpwebsite/chunk-ZJNHTK4C.js": "5a706d90f0993da7e56da9ff25739174acb2701d",
+    "/dpwebsite/chunk-4ACKUYO4.js": "be487b0a7344c458060eb331f21c3b3c232b05eb",
+    "/dpwebsite/chunk-5W3ELVNV.js": "92332cc954a559f1957f103a980ebfde0ee79244",
+    "/dpwebsite/chunk-CLRHJNCU.js": "c38b7606b43fc216d5869b12557d8b1a653c8e71",
+    "/dpwebsite/chunk-IMBZB2HQ.js": "c9cb3334c33adfddf270c02723338707bed8d769",
+    "/dpwebsite/chunk-SUUZUYSZ.js": "639b9a964c327faac51c0a3486ef2772b34f2f47",
+    "/dpwebsite/chunk-VQHPDKCR.js": "fb94a2ff505d99de73005caf1f8b5198df9a91e1",
+    "/dpwebsite/chunk-XP5JZTUK.js": "e8a01ad5a1a57816657b9be3f222f7ee11da5b1a",
     "/dpwebsite/favicon.ico": "5e693780a17f279a4bf59aec411968b2625281ba",
-    "/dpwebsite/index.html": "51aa9f3dd910dacba897e00688cb23b18f14e707",
-    "/dpwebsite/main-N4MDNNLR.js": "99add996d27bf544c709779defb38cb9e6f29119",
+    "/dpwebsite/index.html": "bc246f6543e6b313453c9bf47931856303b4aff1",
+    "/dpwebsite/main-C3W3D2MK.js": "20e42a3e8db728eab7cff6088fe9913e0dde5bbd",
     "/dpwebsite/manifest.webmanifest": "ed7b3f6f1bbd3f9d3c39974fdbcb53ac50e4a899",
-    "/dpwebsite/styles-URHOUPUC.css": "2d887298826c98bed30480c0bcf18013423cac8a"
+    "/dpwebsite/styles-NUPK25NR.css": "d3655271c26f526abec01f6d90d885cfc390754a"
   },
   "navigationUrls": [
     {
